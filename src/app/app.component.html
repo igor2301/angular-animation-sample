@@ -1,4 +1,9 @@
-<div class="switch" (click)="switch()"></div>
+<div class="container">
+  <button class="switch" (click)="switch('off')">Off</button>
+  <button class="switch" (click)="switch('right')">Right</button>
+  <button class="switch" (click)="switch('bottom')">Bottom</button>
+  <button class="switch" (click)="switch('left')">Left</button>
+</div>
 <div
   class="details-panel"
   [@expand]="{ value: currentAnimation, params: { size: animationParams } }"
