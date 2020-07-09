@@ -1,0 +1,17 @@
+<div class="switch" (click)="switch()"></div>
+<div
+  class="details-panel"
+  [@expand]="{ value: currentAnimation, params: { size: animationParams } }"
+  (@expand.start)="onAnimationStart($event)"
+  (@expand.done)="onAnimationDone($event)"
+  [ngStyle]="{
+    width: animatedSideBarWidth,
+    height: animatedSideBarHeight,
+    top: sideBarTop,
+    bottom: sideBarBottom,
+    right: sideBarRight,
+    left: sideBarLeft
+  }"
+>
+  <div class="content"></div>
+</div>
