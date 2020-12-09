@@ -15,24 +15,12 @@ export enum SideBarViewMode {
   styleUrls: ['./app.component.scss'],
   animations: [
     trigger('expand', [
-      state('rcollapsed', style({ width: '0' }), {
-        params: { size: '0px' },
-      }),
-      state('rexpanded', style({ width: '{{size}}' }), {
-        params: { size: '0px' },
-      }),
-      state('bcollapsed', style({ height: '0' }), {
-        params: { size: '0px' },
-      }),
-      state('bexpanded', style({ height: '{{size}}' }), {
-        params: { size: '0px' },
-      }),
-      state('lcollapsed', style({ width: '0' }), {
-        params: { size: '0px' },
-      }),
-      state('lexpanded', style({ width: '{{size}}' }), {
-        params: { size: '0px' },
-      }),
+      state('rcollapsed', style({ width: '0' }), { params: { size: '0px' } }),
+      state('rexpanded', style({ width: '{{size}}' }), { params: { size: '0px' } }),
+      state('bcollapsed', style({ height: '0' }), { params: { size: '0px' } }),
+      state('bexpanded', style({ height: '{{size}}' }), { params: { size: '0px' } }),
+      state('lcollapsed', style({ width: '0' }), { params: { size: '0px' } }),
+      state('lexpanded', style({ width: '{{size}}' }), { params: { size: '0px' } }),
       transition('* => bexpanded', [style({ height: '0' }), animate('0.3s')]),
       transition('* => rexpanded', [style({ width: '0' }), animate('0.3s')]),
       transition('* => lexpanded', [style({ width: '0' }), animate('0.3s')]),
